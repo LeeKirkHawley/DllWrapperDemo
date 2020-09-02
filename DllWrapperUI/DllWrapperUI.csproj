@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DllWrapperDemo\DllWrapperDemo.csproj">
+      <Project>{6862ad89-5724-4388-9da8-757e6d08a059}</Project>
+      <Name>DllWrapperDemo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

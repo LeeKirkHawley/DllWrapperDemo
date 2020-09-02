@@ -6,8 +6,13 @@
 #  define EXPORT __declspec(dllimport)
 #endif
 
-EXPORT class WrapExample 
+extern "C" {
+	EXPORT int TestOne();
+	EXPORT int TestTwo();
+};
+
+class WrapExample
 {
 public:
-	EXPORT int TestFunc();
+	int TestFunc();
 };
