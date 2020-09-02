@@ -17,6 +17,10 @@ namespace DllWrapperUI {
             int testTwoResult = wrapper.GetTwo();
             Console.WriteLine($"GetTwo() returned {testTwoResult}");
 
+            DllWrapper.ManagedData data = new DllWrapper.ManagedData();
+            wrapper.GetThree(out data);
+            Console.WriteLine($"GetThree() returned {data.BigValue} and \"{data.Text}\"");
+
             Console.Read();
         }
     }

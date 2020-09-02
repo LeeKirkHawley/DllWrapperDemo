@@ -1,4 +1,5 @@
 #pragma once
+#include <comutil.h>
 
 #ifdef MAKEDLL
 #  define EXPORT __declspec(dllexport)
@@ -6,12 +7,21 @@
 #  define EXPORT __declspec(dllimport)
 #endif
 
+struct Data
+{
+	BSTR Text;
+	int BigValue;
+};
+
+
+
 extern "C" {
 	EXPORT int TestOne();
 	EXPORT int TestTwo();
+	EXPORT void TestThree(Data* data);
 };
 
-class WrapExample
+class Internal
 {
 public:
 	int TestFunc();
